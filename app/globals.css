@@ -1,6 +1,13 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -9,34 +16,219 @@
     --foreground: #ededed;
   }
 }
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+@font-face {
+  font-family: "MyFont";
+  src: url("/fonts/font1.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+.custom-font {
+  font-family: "MyFont", sans-serif;
+}
+.bg-custom-gray {
+  background-color: #3d3d3d;
 }
 
+
+
 body {
-  color: var(--foreground);
   background: var(--background);
+  color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+
+/* Holographic Card */
+.holographic-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.holographic-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(228, 240, 240, 0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.4s ease;
+  opacity: 0;
+  pointer-events: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.holographic-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(236, 240, 240, 0.3);
+}
+
+.holographic-card:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+/* Liquid Morph */
+.liquid-morph-element {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s ease, border-radius 0.5s ease;
+}
+
+.liquid-morph-element::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(#0ff 0deg, #0a2342 120deg, #0ff 240deg);
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.6s ease;
+  pointer-events: none;
+  z-index: 1;
+  border-radius: inherit;
+}
+
+
+.liquid-morph-element:hover {
+  transform: rotate(8deg);
+}
+
+.liquid-morph-element:hover::before {
+  opacity: 0.3;
+  transform: scale(2);
+}
+
+/* Social Icons */
+
+ul li {
+  list-style: none;
+}
+
+ul li a.social-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 50px;
+  font-size: 22px;
+  margin: 0 6px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #fff;
+  z-index: 1;
+}
+
+ul li a .icon {
+  position: relative;
+  color: #262626;
+  transition: 0.5s;
+  z-index: 3;
+}
+
+ul li a:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+ul li a.social-icon::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+ul li a:hover::before {
+  top: 0;
+}
+
+ul li:nth-child(1) a::before {
+  background: #3b5999;
+}
+
+ul li:nth-child(2) a::before {
+  background: #55acee;
+}
+
+ul li:nth-child(3) a::before {
+  background: #0077b5;
+}
+
+ul li:nth-child(4) a::before {
+  background: #dd4b39;
+}
+
+/* wave  */
+.wave-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.wave-section .wave {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #4973ff; /* 🔧 Add this like original */
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+  z-index: 0;
+  overflow: visible;
+}
+
+.wave-section .wave span {
+  position: absolute;
+  width: 325vh;
+  height: 325vh;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: #000; /* fallback color */
+}
+
+.wave-section .wave span:nth-child(1) {
+  border-radius: 45%;
+  background: rgba(20, 20, 20, 1);
+  animation: animate 5s linear infinite;
+}
+
+.wave-section .wave span:nth-child(2) {
+  border-radius: 40%;
+  background: rgba(20, 20, 20, 0.5);
+  animation: animate 10s linear infinite;
+}
+
+.wave-section .wave span:nth-child(3) {
+  border-radius: 42.5%;
+  background: rgba(20, 20, 20, 0.5);
+  animation: animate 15s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
   }
 }
