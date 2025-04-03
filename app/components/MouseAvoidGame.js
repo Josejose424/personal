@@ -127,7 +127,7 @@ export default function MouseAvoidGame() {
             }}
             className="bg-blue-500 text-white px-2 py-2 rounded"
           >
-            Avoid My Skills! 
+            See My Skills! 
           </button>
           {gameOver && (
             <div className="text-red-600 font-bold">Game Over</div>

@@ -73,57 +73,111 @@ export default function Home() {
   <div className="px-4 sm:px-8">
     <h1 className="text-4xl font-bold flex items-center justify-center p-4 mt-8 mb-4 text-black"> Projects </h1>
       {/* Black background section */}
-      <div className="grid grid-cols-2 grid-rows-2 gap-4 w-full max-w-7xl mx-auto p-4 mt-4 h-[400px] bg-neutral-800 rounded-3xl">
-        <div className="bg-neutral-900 rounded-3xl flex items-center justify-center text-white text-lg">Proj 1</div>
-        <div className="bg-neutral-900 rounded-3xl flex items-center justify-center text-white text-lg">Proj 2</div>
+      <div className="grid grid-cols-2 grid-rows-2 gap-4 w-full max-w-7xl mx-auto p-4 mt-4 h-[500px] bg-neutral-800 rounded-3xl">
+      
+      {/* DSG */}
+      <div className="project-card group relative overflow-hidden rounded-3xl">
+        <img src="/dsg2.png" alt="Project 1" className="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+        <img src="/dsg4.png" alt="Project 1 Hover" className="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+        <div className="line absolute bottom-0 left-0 h-1 bg-white w-0 group-hover:w-full transition-all duration-500"></div>
+      </div>
+
+        {/* Local Sphere */}
+        <div className="project-card group relative overflow-hidden rounded-3xl">
+                <img src="/LS1.png" alt="Project 1" className="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+                <img src="/LS3.png" alt="Project 1 Hover" className="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="line absolute bottom-0 left-0 h-1 bg-white w-0 group-hover:w-full transition-all duration-500"></div>
+              </div>
+      
         <div className="bg-neutral-900 rounded-3xl flex items-center justify-center text-white text-lg">Proj 3</div>
         <div className="bg-neutral-900 rounded-3xl flex items-center justify-center text-white text-lg">Proj 4</div>
       </div>
 
-      <div className="w-[800px] mx-auto bg-custom-grey rounded-3xl p-4">
-      <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
-        spaceBetween={20}
-        slidesPerView={3}
-        loop={true}
-        autoplay={{
-          delay: 4000,
-          disableOnInteraction: false,
-        }}
-        className="my-8"
-      >
+    </div>
+      <h1 className="text-4xl font-bold flex items-center justify-center p-4 mt-8 mb-4 text-black"> About Me </h1>
+    <div className="w-[1000px] mx-auto bg-custom-grey rounded-3xl p-4">
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          spaceBetween={30}
+          slidesPerView={4}
+          loop={true}
+          autoplay={{
+            delay: 4000,
+            disableOnInteraction: false,
+          }}
+          className="my-8"
+        >
             <SwiperSlide>
-              <div className="h-[200px] bg-neutral-900 rounded-2xl p-4 flex flex-col justify-center text-white">
-                <h2 className="text-xl font-bold">Android Dev</h2>
-                <p className="text-sm text-gray-300 mt-2">Kotlin</p>
+              {/* Vert */}
+              <div className="w-[200px] h-auto aspect-[9/16] bg-neutral-900 rounded-2xl overflow-hidden">
+                <img src="/Favs/Boat.jpeg" alt="Project 1" className="w-full h-full object-cover" />
               </div>
             </SwiperSlide>
 
             <SwiperSlide>
-              <div className="h-[200px] bg-neutral-900 rounded-2xl p-4 flex flex-col justify-center text-white">
-                <h3 className="text-xl font-bold">Project 2: Date Night Planner</h3>
-                <p className="text-sm text-gray-300 mt-2">AI-powered Django app that suggests date night ideas based on filters.</p>
+              {/* Vert */}
+              <div className="w-[200px] h-auto aspect-[9/16] bg-neutral-900 rounded-2xl overflow-hidden">
+                <img src="/Favs/Temple.jpeg" alt="Project 1" className="w-full h-full object-cover" />
               </div>
             </SwiperSlide>
 
             <SwiperSlide>
-              <div className="h-[200px] bg-neutral-900 rounded-2xl p-4 flex flex-col justify-center text-white">
-                <h3 className="text-xl font-bold">Project 3: NASA CO₂ Tracker</h3>
-                <p className="text-sm text-gray-300 mt-2">Map app using NASA data to visualize CO₂ growth and greenhouse gas trends.</p>
+              {/* Vert */}
+              <div className="w-[200px] h-auto aspect-[9/16] bg-neutral-900 rounded-2xl overflow-hidden">
+                <img src="/Favs/Colors.jpeg" alt="Project 1" className="w-full h-full object-cover" />
               </div>
             </SwiperSlide>
 
             <SwiperSlide>
-              <div className="mx-4 h-[200px] bg-neutral-900 rounded-2xl p-4 flex flex-col justify-center text-white">
-                <h3 className="text-xl font-bold">Project 2: Date Night Planner</h3>
-                <p className="text-sm text-gray-300 mt-2">
-                  AI-powered Django app that suggests date night ideas based on filters.
-                </p>
+              {/* Hor */}
+              <div className="w-[200px] h-auto aspect-[9/16] bg-neutral-900 rounded-2xl overflow-hidden">
+                <img src="/Favs/Greece.jpeg" alt="Project 1" className="h-full w-auto object-cover" />
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              {/* Hor */}
+              <div className="w-[200px] h-auto aspect-[9/16] bg-neutral-900 rounded-2xl overflow-hidden">
+                <img src="/Favs/Hawaii.jpeg" alt="Project 1" className="h-full w-auto object-cover" />
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              {/* Vert */}
+              <div className="w-[200px] h-auto aspect-[9/16] bg-neutral-900 rounded-2xl overflow-hidden">
+                <img src="/Favs/Camel.jpeg" alt="Project 1" className="w-full h-full object-cover" />
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              {/* Vert */}
+              <div className="w-[200px] h-auto aspect-[9/16] bg-neutral-900 rounded-2xl overflow-hidden">
+                <img src="/Favs/Petra.jpeg" alt="Project 1" className="w-full h-full object-cover" />
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              {/* Vert */}
+              <div className="w-[200px] h-auto aspect-[9/16] bg-neutral-900 rounded-2xl overflow-hidden">
+                <img src="/Favs/Temple.jpeg" alt="Project 1" className="w-full h-full object-cover" />
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              {/* Vert */}
+              <div className="w-[200px] h-auto aspect-[9/16] bg-neutral-900 rounded-2xl overflow-hidden">
+                <img src="/Favs/Tut.jpeg" alt="Project 1" className="w-full h-full object-cover" />
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              {/* Vert */}
+              <div className="w-[200px] h-auto aspect-[9/16] bg-neutral-900 rounded-2xl overflow-hidden">
+                <img src="/Favs/Tokyo.jpeg" alt="Project 1" className="w-full h-full object-cover" />
               </div>
             </SwiperSlide>
             </Swiper>
     </div>      
-    </div>
     </div>
   );
 }
