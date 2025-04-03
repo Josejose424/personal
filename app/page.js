@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import Typewriter from "./components/Typewriter";
 import FluidString from './components/FluidString';
-import DinoGame from './components/DinoGame';
+import MouseAvoidGame from './components/MouseAvoidGame';
 
 export default function Home() {
   return (
@@ -36,9 +36,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="col-span-2 row-span-5 bg-neutral-900 h-full rounded-3xl flex items-center justify-center text-white text-lg">
-            <DinoGame />
-          </div>
+          <div className="relative col-span-2 row-span-5 bg-neutral-900 h-full rounded-3xl flex items-center justify-center text-white text-lg">
+  <MouseAvoidGame/>
+</div>
 
           <div className="col-span-2 row-span-2 bg-neutral-900 rounded-3xl flex items-center justify-center text-white text-lg">
             <p className="text-lg text-white">Web Developer</p>
