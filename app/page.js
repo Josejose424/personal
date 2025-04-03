@@ -84,7 +84,7 @@ export default function Home() {
 
         {/* Local Sphere */}
         <div className="project-card group relative overflow-hidden rounded-3xl">
-                <img src="/LS1.png" alt="Project 1" className="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+                <img src="/LS7.png" alt="Project 1" className="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
                 <img src="/LS3.png" alt="Project 1 Hover" className="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                 <div className="line absolute bottom-0 left-0 h-1 bg-white w-0 group-hover:w-full transition-all duration-500"></div>
               </div>
