@@ -71,8 +71,16 @@ export default function Home() {
        </section>
 
   <div className="px-4 sm:px-8">
-    <h1 className="text-4xl font-bold flex items-center justify-center p-4 mt-8 mb-4 text-black">Skills</h1>
-    <div className="w-[600px] mx-auto bg-custom-grey rounded-3xl p-4">
+    <h1 className="text-4xl font-bold flex items-center justify-center p-4 mt-8 mb-4 text-black"> Projects </h1>
+      {/* Black background section */}
+      <div className="grid grid-cols-2 grid-rows-2 gap-4 w-full max-w-7xl mx-auto p-4 mt-4 h-[400px] bg-neutral-800 rounded-3xl">
+        <div className="bg-neutral-900 rounded-3xl flex items-center justify-center text-white text-lg">Proj 1</div>
+        <div className="bg-neutral-900 rounded-3xl flex items-center justify-center text-white text-lg">Proj 2</div>
+        <div className="bg-neutral-900 rounded-3xl flex items-center justify-center text-white text-lg">Proj 3</div>
+        <div className="bg-neutral-900 rounded-3xl flex items-center justify-center text-white text-lg">Proj 4</div>
+      </div>
+
+      <div className="w-[800px] mx-auto bg-custom-grey rounded-3xl p-4">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={20}
@@ -115,13 +123,6 @@ export default function Home() {
             </SwiperSlide>
             </Swiper>
     </div>      
-      {/* Black background section */}
-      <div className="grid grid-cols-2 grid-rows-2 gap-4 w-full max-w-7xl mx-auto p-4 mt-4 h-[400px] bg-neutral-800 rounded-3xl">
-        <div className="bg-neutral-900 rounded-3xl flex items-center justify-center text-white text-lg">Proj 1</div>
-        <div className="bg-neutral-900 rounded-3xl flex items-center justify-center text-white text-lg">Proj 2</div>
-        <div className="bg-neutral-900 rounded-3xl flex items-center justify-center text-white text-lg">Proj 3</div>
-        <div className="bg-neutral-900 rounded-3xl flex items-center justify-center text-white text-lg">Proj 4</div>
-      </div>
     </div>
     </div>
   );
