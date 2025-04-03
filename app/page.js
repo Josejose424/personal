@@ -89,8 +89,8 @@ export default function Home() {
                 <div className="line absolute bottom-0 left-0 h-1 bg-white w-0 group-hover:w-full transition-all duration-500"></div>
               </div>
       
-        <div className="bg-neutral-900 rounded-3xl flex items-center justify-center text-white text-lg">Proj 3</div>
-        <div className="bg-neutral-900 rounded-3xl flex items-center justify-center text-white text-lg">Proj 4</div>
+        <div className="bg-neutral-900 rounded-3xl flex items-center justify-center text-white text-lg">Coming Soon...</div>
+        <div className="bg-neutral-900 rounded-3xl flex items-center justify-center text-white text-lg">Coming Soon...</div>
       </div>
 
     </div>
