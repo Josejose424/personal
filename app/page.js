@@ -161,8 +161,8 @@ export default function Home() {
         <div className="grid grid-cols-2 grid-rows-2 gap-4 w-full max-w-7xl mx-auto p-4 mt-4 h-[500px] bg-neutral-800 rounded-3xl">
           {/* DSG */}
           <div className="project-card group relative overflow-hidden rounded-3xl">
-            <img src="/dsg2.png" alt="Project 1" className="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
-            <img src="/dsg4.png" alt="Project 1 Hover" className="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+            <img src="/dsgslide1.png" alt="Project 1" className="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+            <img src="/dsgSlide2.png" alt="Project 1 Hover" className="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
             <div className="line absolute bottom-0 left-0 h-1 bg-white w-0 group-hover:w-full transition-all duration-500"></div>
           </div>
           {/* Local Sphere */}
@@ -196,7 +196,7 @@ export default function Home() {
                 className="w-full h-full"
               >
                 <SwiperSlide>
-                  <img src="/dsgslide1.1.png" alt="Project 1" className="w-full h-full object-cover" />
+                  <img src="/dsgslide1.png" alt="Project 1" className="w-full h-full object-cover" />
                 </SwiperSlide>
                 <SwiperSlide>
                   <img src="/dsgSlide2.png" alt="Project 1 Hover" className="w-full h-full object-cover" />
@@ -205,20 +205,39 @@ export default function Home() {
                   <img src="/dsgslide3.png" alt="Project 1" className="w-full h-full object-cover" />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src="/dsgSlide2.png" alt="Project 1 Hover" className="w-full h-full object-cover" />
+                  <img src="/dsgslide4.png" alt="Project 1" className="w-full h-full object-cover" />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src="/dsgslide1.png" alt="Project 1" className="w-full h-full object-cover" />
+                  <img src="/dsgslide5.png" alt="Project 1" className="w-full h-full object-cover" />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src="/dsgSlide2.png" alt="Project 1 Hover" className="w-full h-full object-cover" />
+                  <img src="/dsgslide6.png" alt="Project 1" className="w-full h-full object-cover" />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src="/dsgslide1.png" alt="Project 1" className="w-full h-full object-cover" />
+                  <img src="/dsgslide7.png" alt="Project 1" className="w-full h-full object-cover" />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src="/dsgSlide2.png" alt="Project 1 Hover" className="w-full h-full object-cover" />
+                  <img src="/dsgslide8.png" alt="Project 1" className="w-full h-full object-cover" />
                 </SwiperSlide>
+                <SwiperSlide>
+                  <img src="/dsgslide9.png" alt="Project 1" className="w-full h-full object-cover" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="/dsgslide10.png" alt="Project 1" className="w-full h-full object-cover" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="/dsgslide11.png" alt="Project 1" className="w-full h-full object-cover" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="/dsgslide12.png" alt="Project 1" className="w-full h-full object-cover" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="/dsgslide13.png" alt="Project 1" className="w-full h-full object-cover" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="/dsgslide14.png" alt="Project 1" className="w-full h-full object-cover" />
+                </SwiperSlide>
+                
               </Swiper>
               <div className="line absolute bottom-0 left-0 h-1 bg-white w-0 group-hover:w-full transition-all duration-500"></div>
             </div>
