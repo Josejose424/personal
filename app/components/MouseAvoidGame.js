@@ -90,15 +90,29 @@ export default function MouseAvoidGame() {
     return () => cancelAnimationFrame(animationId);
   }, [started, gameOver, canvasSize]);
 
-  const handleMouseMove = (e) => {
-    if (!started || gameOver) return;
+  const updatePlayerPosition = (clientX, clientY) => {
     const rect = gameRef.current.getBoundingClientRect();
-    const x = e.clientX - rect.left - 15;
-    const y = e.clientY - rect.top - 15;
+    const x = clientX - rect.left - 15;
+    const y = clientY - rect.top - 15;
     playerRef.current = {
       x: Math.max(0, Math.min(canvasSize.width - 30, x)),
       y: Math.max(0, Math.min(canvasSize.height - 30, y))
     };
+  };
+
+  const handleMouseMove = (e) => {
+    if (!started || gameOver) return;
+    updatePlayerPosition(e.clientX, e.clientY);
+  };
+
+  const handleTouchMove = (e) => {
+    if (!started || gameOver) return;
+    // Prevent scrolling on touch devices
+    e.preventDefault();
+    const touch = e.touches[0];
+    if (touch) {
+      updatePlayerPosition(touch.clientX, touch.clientY);
+    }
   };
 
   useEffect(() => {
@@ -142,6 +156,7 @@ export default function MouseAvoidGame() {
         width={canvasSize.width}
         height={canvasSize.height}
         onMouseMove={handleMouseMove}
+        onTouchMove={handleTouchMove}
         className="z-10 rounded-3xl w-full h-full"
         style={{ backgroundColor: 'transparent', pointerEvents: started && !gameOver ? 'auto' : 'none' }}
       />
