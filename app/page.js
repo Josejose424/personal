@@ -7,8 +7,10 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import Typewriter from "./components/Typewriter";
 import FluidString from './components/FluidString';
 import MouseAvoidGame from './components/MouseAvoidGame';
+import { useRef } from 'react';
 
 export default function Home() {
+  const swiperRef = useRef(null);
   return (
     <div className='bg-neutral-100'>
       {/* Desktop / Bento Box Layout (visible on medium and larger screens) */}
@@ -152,8 +154,8 @@ export default function Home() {
 
     
 
-      {/* Rest of your content remains unchanged */}
-      <div className="bg-neutral-100 px-4 sm:px-8">
+      {/* Desktop / Normal Version */}
+      <div className="hidden md:block bg-neutral-100 px-4 sm:px-8">
         <h1 className="text-4xl font-bold flex items-center justify-center p-4 mt-8 mb-4 text-black"> Projects </h1>
         {/* Black background section */}
         <div className="grid grid-cols-2 grid-rows-2 gap-4 w-full max-w-7xl mx-auto p-4 mt-4 h-[500px] bg-neutral-800 rounded-3xl">
@@ -173,9 +175,65 @@ export default function Home() {
           <div className="bg-neutral-900 rounded-3xl flex items-center justify-center text-white text-lg">Coming Soon...</div>
         </div>
       </div>
+
+      {/* Mobile Version */}
+      <div className="block md:hidden bg-neutral-100 px-4 sm:px-8">
+        <h1 className="text-3xl font-bold flex items-center justify-center p-4 mt-8 mb-4 text-black">Projects</h1>
+        {/* Adjusted grid for mobile (one column) */}
+        <div className="grid grid-cols-1 gap-4 w-full max-w-7xl mx-auto p-4 mt-4 bg-neutral-800 rounded-3xl">
+          {/* DSG */}
+          <div
+              className="project-card relative overflow-hidden rounded-3xl group"
+              onMouseEnter={() => swiperRef.current?.autoplay.start()}
+              onMouseLeave={() => swiperRef.current?.autoplay.stop()}
+            >
+              <Swiper
+                onSwiper={(swiper) => (swiperRef.current = swiper)}
+                modules={[Autoplay]}
+                autoplay={false} // disable autoplay until hover
+                loop={true}
+                slidesPerView={1}
+                className="w-full h-full"
+              >
+                <SwiperSlide>
+                  <img src="/dsg2.png" alt="Project 1" className="w-full h-full object-cover" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="/dsg4.png" alt="Project 1 Hover" className="w-full h-full object-cover" />
+                </SwiperSlide>
+              </Swiper>
+              <div className="line absolute bottom-0 left-0 h-1 bg-white w-0 group-hover:w-full transition-all duration-500"></div>
+            </div>
+          {/* Local Sphere */}
+            <div
+              className="project-card relative overflow-hidden rounded-3xl group h-[300px]"
+              onMouseEnter={() => swiperRef.current?.autoplay.start()}
+              onMouseLeave={() => swiperRef.current?.autoplay.stop()}
+            >
+              <Swiper
+                onSwiper={(swiper) => (swiperRef.current = swiper)}
+                direction="vertical"
+                modules={[Autoplay]}
+                autoplay={false} // disable autoplay until hover
+                loop={true}
+                slidesPerView={1}
+                className="w-full h-full"
+              >
+                <SwiperSlide>
+                  <img src="/LS7.png" alt="Project 1" className="w-full h-full object-cover" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="/LS3.png" alt="Project 1 Hover" className="w-full h-full object-cover" />
+                </SwiperSlide>
+              </Swiper>
+              <div className="line absolute bottom-0 left-0 h-1 bg-white w-0 group-hover:w-full transition-all duration-500"></div>
+            </div>
+        </div>
+      </div>
+
+
+      {/* About me section */}
       <h1 className="text-4xl font-bold flex items-center justify-center p-4 mt-8 mb-4 text-black"> About Me </h1>
-      
-      
       <div className="w-full max-w-[1000px] mx-auto bg-white rounded-3xl p-4">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
