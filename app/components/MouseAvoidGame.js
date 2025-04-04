@@ -107,7 +107,6 @@ export default function MouseAvoidGame() {
 
   const handleTouchMove = (e) => {
     if (!started || gameOver) return;
-    // Prevent scrolling on touch devices
     e.preventDefault();
     const touch = e.touches[0];
     if (touch) {
@@ -158,7 +157,7 @@ export default function MouseAvoidGame() {
         onMouseMove={handleMouseMove}
         onTouchMove={handleTouchMove}
         className="z-10 rounded-3xl w-full h-full"
-        style={{ backgroundColor: 'transparent', pointerEvents: started && !gameOver ? 'auto' : 'none' }}
+        style={{ backgroundColor: 'transparent', pointerEvents: started && !gameOver ? 'auto' : 'none', touchAction: 'none' }}
       />
     </>
   );
