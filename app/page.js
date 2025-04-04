@@ -170,93 +170,93 @@ export default function Home() {
             <div className="line absolute bottom-0 left-0 h-1 bg-white w-0 group-hover:w-full transition-all duration-500"></div>
           </div>
           <div className="bg-neutral-900 rounded-3xl flex items-center justify-center text-white text-lg">Coming Soon...</div>
-          <div className="bg-neutral-900 rounded-3xl flex items-center justify-center text-white text-lg">Coming S</div>
+          <div className="bg-neutral-900 rounded-3xl flex items-center justify-center text-white text-lg">Coming Soon...</div>
         </div>
       </div>
       <h1 className="text-4xl font-bold flex items-center justify-center p-4 mt-8 mb-4 text-black"> About Me </h1>
       
       
       <div className="w-full max-w-[1000px] mx-auto bg-white rounded-3xl p-4">
-  <Swiper
-    modules={[Navigation, Pagination, Autoplay]}
-    loop={true}
-    autoplay={{
-      delay: 4000,
-      disableOnInteraction: false,
-    }}
-    spaceBetween={30}
-    breakpoints={{
-      0: {
-        slidesPerView: 1,
-        spaceBetween: 10,
-      },
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 30,
-      },
-    }}
-    className="my-8"
-  >
-    <SwiperSlide>
-      <div className="h-auto aspect-[9/16] bg-neutral-900 rounded-2xl overflow-hidden">
-        <img src="/Favs/Boat.jpeg" alt="Project 1" className="w-full h-full object-cover" />
-      </div>
-    </SwiperSlide>
-    <SwiperSlide>
-      <div className="h-auto aspect-[9/16] bg-neutral-900 rounded-2xl overflow-hidden">
-        <img src="/Favs/Temple.jpeg" alt="Project 1" className="w-full h-full object-cover" />
-      </div>
-    </SwiperSlide>
-    <SwiperSlide>
-      <div className="h-auto aspect-[9/16] bg-neutral-900 rounded-2xl overflow-hidden">
-        <img src="/Favs/Colors.jpeg" alt="Project 1" className="w-full h-full object-cover" />
-      </div>
-    </SwiperSlide>
-    <SwiperSlide>
-      <div className="h-auto aspect-[9/16] bg-neutral-900 rounded-2xl overflow-hidden">
-        <img src="/Favs/Greece.jpeg" alt="Project 1" className="h-full w-auto object-cover" />
-      </div>
-    </SwiperSlide>
-    <SwiperSlide>
-      <div className="h-auto aspect-[9/16] bg-neutral-900 rounded-2xl overflow-hidden">
-        <img src="/Favs/Hawaii.jpeg" alt="Project 1" className="h-full w-auto object-cover" />
-      </div>
-    </SwiperSlide>
-    <SwiperSlide>
-      <div className="h-auto aspect-[9/16] bg-neutral-900 rounded-2xl overflow-hidden">
-        <img src="/Favs/Camel.jpeg" alt="Project 1" className="w-full h-full object-cover" />
-      </div>
-    </SwiperSlide>
-    <SwiperSlide>
-      <div className="h-auto aspect-[9/16] bg-neutral-900 rounded-2xl overflow-hidden">
-        <img src="/Favs/Petra.jpeg" alt="Project 1" className="w-full h-full object-cover" />
-      </div>
-    </SwiperSlide>
-    <SwiperSlide>
-      <div className="h-auto aspect-[9/16] bg-neutral-900 rounded-2xl overflow-hidden">
-        <img src="/Favs/Temple.jpeg" alt="Project 1" className="w-full h-full object-cover" />
-      </div>
-    </SwiperSlide>
-    <SwiperSlide>
-      <div className="h-auto aspect-[9/16] bg-neutral-900 rounded-2xl overflow-hidden">
-        <img src="/Favs/Tut.jpeg" alt="Project 1" className="w-full h-full object-cover" />
-      </div>
-    </SwiperSlide>
-    <SwiperSlide>
-      <div className="h-auto aspect-[9/16] bg-neutral-900 rounded-2xl overflow-hidden">
-        <img src="/Favs/Tokyo.jpeg" alt="Project 1" className="w-full h-full object-cover" />
-      </div>
-    </SwiperSlide>
-  </Swiper>
-</div>
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            loop={true}
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+            }}
+            spaceBetween={30}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
+              1024: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+              },
+            }}
+            className="my-8"
+          >
+            <SwiperSlide>
+              <div className="h-auto aspect-[9/16] bg-neutral-900 rounded-2xl overflow-hidden">
+                <img src="/Favs/Boat.jpeg" alt="Project 1" className="w-full h-full object-cover" />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="h-auto aspect-[9/16] bg-neutral-900 rounded-2xl overflow-hidden">
+                <img src="/Favs/Temple.jpeg" alt="Project 1" className="w-full h-full object-cover" />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="h-auto aspect-[9/16] bg-neutral-900 rounded-2xl overflow-hidden">
+                <img src="/Favs/Colors.jpeg" alt="Project 1" className="w-full h-full object-cover" />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="h-auto aspect-[9/16] bg-neutral-900 rounded-2xl overflow-hidden">
+                <img src="/Favs/Greece.jpeg" alt="Project 1" className="h-full w-auto object-cover" />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="h-auto aspect-[9/16] bg-neutral-900 rounded-2xl overflow-hidden">
+                <img src="/Favs/Hawaii.jpeg" alt="Project 1" className="h-full w-auto object-cover" />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="h-auto aspect-[9/16] bg-neutral-900 rounded-2xl overflow-hidden">
+                <img src="/Favs/Camel.jpeg" alt="Project 1" className="w-full h-full object-cover" />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="h-auto aspect-[9/16] bg-neutral-900 rounded-2xl overflow-hidden">
+                <img src="/Favs/Petra.jpeg" alt="Project 1" className="w-full h-full object-cover" />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="h-auto aspect-[9/16] bg-neutral-900 rounded-2xl overflow-hidden">
+                <img src="/Favs/Temple.jpeg" alt="Project 1" className="w-full h-full object-cover" />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="h-auto aspect-[9/16] bg-neutral-900 rounded-2xl overflow-hidden">
+                <img src="/Favs/Tut.jpeg" alt="Project 1" className="w-full h-full object-cover" />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="h-auto aspect-[9/16] bg-neutral-900 rounded-2xl overflow-hidden">
+                <img src="/Favs/Tokyo.jpeg" alt="Project 1" className="w-full h-full object-cover" />
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
     </div>
   );
 }
