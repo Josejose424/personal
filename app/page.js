@@ -196,23 +196,40 @@ export default function Home() {
                 className="w-full h-full"
               >
                 <SwiperSlide>
-                  <img src="/dsg2.png" alt="Project 1" className="w-full h-full object-cover" />
+                  <img src="/dsgslide1.1.png" alt="Project 1" className="w-full h-full object-cover" />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src="/dsg4.png" alt="Project 1 Hover" className="w-full h-full object-cover" />
+                  <img src="/dsgSlide2.png" alt="Project 1 Hover" className="w-full h-full object-cover" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="/dsgslide3.png" alt="Project 1" className="w-full h-full object-cover" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="/dsgSlide2.png" alt="Project 1 Hover" className="w-full h-full object-cover" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="/dsgslide1.png" alt="Project 1" className="w-full h-full object-cover" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="/dsgSlide2.png" alt="Project 1 Hover" className="w-full h-full object-cover" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="/dsgslide1.png" alt="Project 1" className="w-full h-full object-cover" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="/dsgSlide2.png" alt="Project 1 Hover" className="w-full h-full object-cover" />
                 </SwiperSlide>
               </Swiper>
               <div className="line absolute bottom-0 left-0 h-1 bg-white w-0 group-hover:w-full transition-all duration-500"></div>
             </div>
           {/* Local Sphere */}
-            <div
-              className="project-card relative overflow-hidden rounded-3xl group h-[300px]"
+          <div
+              className="project-card relative overflow-hidden rounded-3xl group"
               onMouseEnter={() => swiperRef.current?.autoplay.start()}
               onMouseLeave={() => swiperRef.current?.autoplay.stop()}
             >
               <Swiper
                 onSwiper={(swiper) => (swiperRef.current = swiper)}
-                direction="vertical"
                 modules={[Autoplay]}
                 autoplay={false} // disable autoplay until hover
                 loop={true}
