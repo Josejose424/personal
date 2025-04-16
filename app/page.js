@@ -32,10 +32,10 @@ function Lines() {
 export default function Home() {
   const swiperRef = useRef(null);
   return (
-    <div className='bg-neutral-100'>
+    <div className='bg-neutral-100 custom-font'>
       {/* Desktop / Bento Box Layout (visible on medium and larger screens) */}
       <div className="hidden md:block">
-        <div className="bg-neutral-100">
+        <div className="bg-neutral-100 ">
           <section className="wave-section">
             <div className="wave">
               <span></span>
@@ -65,7 +65,9 @@ export default function Home() {
                 </div>
                 <div className="col-span-2 row-span-3 bg-neutral-900 rounded-3xl flex flex-col items-center justify-center text-white text-lg p-4">
                   <h1 className="text-4xl font-bold">About Me</h1>
+                  <p className=" custom-font-body mt-4 text-center">
                   <Typewriter text="Hi! I'm Jose Nunez — a proud Mexican-American Software Developer with a passion for Mobile Development, UI/UX Design, and Project Management. Outside of tech, I love playing soccer, rock climbing, volleyball, and recently started running!" />
+                  </p>
                 </div>
                 <div className="col-span-2 row-span-2 bg-neutral-900 rounded-3xl flex flex-col items-center justify-center text-white text-lg">
                   <p className="text-lg mb-4">Lets Connect!</p>
@@ -126,7 +128,9 @@ export default function Home() {
           <div className="block md:hidden p-4">
             <div className="bg-neutral-800 rounded-3xl text-white p-4 flex flex-col items-center justify-center">
               <h1 className="text-2xl font-bold mb-2">About Me</h1>
+              <p className="custom-font-body mt-4 text-center">
               <Typewriter text="Hi! I'm Jose Nunez — a proud Mexican-American Software Developer with a passion for Mobile Development, UI/UX Design, and Project Management." />
+              </p>
             </div>
           </div>
           
@@ -176,7 +180,7 @@ export default function Home() {
       </div>
       
       {/* Desktop / Normal Version */}
-      <div className="hidden md:block bg-neutral-100 px-4 sm:px-8">
+      <div className="hidden md:block bg-neutral-100 px-4 sm:px-8 custom-font">
         <h1 className="text-4xl font-bold flex items-center justify-center p-4 mt-8 mb-4 text-black"> Projects </h1>
         {/* Black background section */}
         <div className="grid grid-cols-2 grid-rows-2 gap-4 w-full max-w-7xl mx-auto p-4 mt-4 h-[500px] bg-neutral-800 rounded-3xl">
@@ -198,7 +202,7 @@ export default function Home() {
       </div>
       
       {/* Mobile Version */}
-      <div className="block md:hidden bg-neutral-100 px-4 sm:px-8">
+      <div className="block md:hidden bg-neutral-100 px-4 sm:px-8 custom-font">
         <h1 className="text-3xl font-bold flex items-center justify-center p-4 mt-8 mb-4 text-black">Projects</h1>
         {/* Adjusted grid for mobile (one column) */}
         <div className="grid grid-cols-1 gap-4 w-full max-w-7xl mx-auto p-4 mt-4 bg-neutral-800 rounded-3xl">

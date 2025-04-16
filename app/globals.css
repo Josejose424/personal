@@ -16,15 +16,28 @@
     --foreground: #ededed;
   }
 }
+
 @font-face {
-  font-family: "MyFont";
-  src: url("/fonts/font1.woff2") format("woff2");
+  font-family: "HeaderFont";
+  src: url("/fonts/Bridie.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BodyFont";
+  src: url("/fonts/second.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 .custom-font {
-  font-family: "MyFont", sans-serif;
+  font-family: "HeaderFont", sans-serif;
 }
+
+.custom-font-body {
+  font-family: "BodyFont", sans-serif;
+}
+
 .bg-custom-gray {
   background-color: #3d3d3d;
 }
